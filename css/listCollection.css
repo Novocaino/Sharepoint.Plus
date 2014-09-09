@@ -1,0 +1,62 @@
+html {
+	min-width: 100px;
+}
+
+body {
+	min-width: 100px;
+}
+
+h4.base-type {
+	text-shadow:5px 5px 3px #134a5e;
+	margin-left:10px;
+}
+
+.error {
+	color: red;
+}
+
+.list-icon {
+	width: 16px;
+	height: 16px;
+	margin-top: 2px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.loading-icon {
+	margin: 16px;
+}
+
+.splist {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0 px 0 px;
+	font-size: 11px;
+}
+
+.splist   td {
+	padding: 2px 8px 2px 8px;
+}
+
+.splist .icon {
+	width: 18px;
+}
+
+.splist .title {
+	width: 200px;
+}
+
+.splist .title a {
+	
+}
+
+.splist .type {
+	width: 120px;
+}
+
+.splist .items {
+	width: 30px;
+}
+
+.splist .last-modified {
+	
+}

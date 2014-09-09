@@ -1,0 +1,10 @@
++-----------------------------------------+----+
+| Base Type                               | ID |
++-----------------------------------------+----+
+| Custom List                             | 0  |
+| Document Library                        | 1  |
+| Not used                                | 2  |
+| Obsolete. Use 0 for discussion boards.  | 3  |
+| Surveys                                 | 4  |
+| Issues List                             | 5  |
++-----------------------------------------+----+

@@ -1,0 +1,96 @@
+html {
+	min-width: 100px;
+	overflow: hidden;
+}
+
+body {
+	min-width: 100px;
+	overflow: hidden;
+}
+
+.error {
+	color: red;
+}
+
+.loading-icon {
+	margin: 16px;
+}
+
+.list-icon {
+	width: 16px;
+	height: 16px;
+	margin-top: 2px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 2px;
+}
+
+.list-detail {
+	font-size: 11px;
+}
+
+.list-detail td {
+	padding: 2px 8px 2px 8px;
+	overflow: hidden;
+	width: 100px;
+	max-width: 100px;
+}
+
+.list-detail .null-value {
+	background-color: lightyellow;
+}
+
+.list-detail .lacked-value {
+	background-color: lightyellow;
+}
+
+.list-detail td span.single {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	word-wrap: initial;
+	word-break: initial;
+	line-break: initial;
+	white-space: nowrap;
+}
+
+.header-container {
+	display: none;
+	overflow: hidden;
+	height: 36px;
+	max-height: 36px;
+	width: 598px;
+	max-width: 598px;
+	min-width: 598px;
+}
+
+.body-container {
+	display: none;
+	overflow: auto;
+	height: 300px;
+	max-height: 300px;
+	width: 600px;
+	max-width: 600px;
+	min-width: 600px;
+}
+
+/*override bootstrap*/
+.navbar {
+	display: none;
+}
+
+.navbar .nav>li>a {
+	padding: 0px;
+}
+
+.navbar-inner {
+	min-height: initial;
+	margin-left: 5px;
+}
+
+.navbar {
+	margin-bottom: initial;
+	width: 598px;
+	max-width: 598px;
+	min-width: 598px;
+}

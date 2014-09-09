@@ -1,0 +1,56 @@
++-------------------------+-----------------------------------------------------------------------------------+-------+
+| Enumeration Name        | Description                                                                       | ID    |
++-------------------------+-----------------------------------------------------------------------------------+-------+
+| InvalidType             | Not used                                                                          | -1    |
+| NoListTemplate          | unspecified list type                                                             | 0     |
+| GenericList             | Custom list                                                                       | 100   |
+| DocumentLibrary         | Document library                                                                  | 101   |
+| Survey                  | Survey                                                                            | 102   |
+| Links                   | Links                                                                             | 103   |
+| Announcements           | Announcements                                                                     | 104   |
+| Contacts                | Contacts                                                                          | 105   |
+| Events                  | Calendar                                                                          | 106   |
+| Tasks                   | Tasks                                                                             | 107   |
+| DiscussionBoard         | Discussion board                                                                  | 108   |
+| PictureLibrary          | Picture library                                                                   | 109   |
+| DataSources             | Data sources for a site                                                           | 110   |
+| WebTemplateCatalog      | Site template gallery                                                             | 111   |
+| UserInformation         | User Information                                                                  | 112   |
+| WebPartCatalog          | Web Part gallery                                                                  | 113   |
+| ListTemplateCatalog     | List Template gallery                                                             | 114   |
+| XMLForm                 | XML Form library                                                                  | 115   |
+| MasterPageCatalog       | Master Page gallery                                                               | 116   |
+| NoCodeWorkflows         | No Code Workflows                                                                 | 117   |
+| WorkflowProcess         | Custom Workflow Process                                                           | 118   |
+| WebPageLibrary          | Wiki Page Library                                                                 | 119   |
+| CustomGrid              | Custom grid for a list                                                            | 120   |
+| SolutionCatalog         | Solutions                                                                         | 121   |
+| NoCodePublic            | No Code Public Workflow                                                           | 122   |
+| ThemeCatalog            | Themes                                                                            | 123   |
+| DataConnectionLibrary   | Data connection library for sharing information about external data connections   | 130   |
+| WorkflowHistory         | Workflow History                                                                  | 140   |
+| GanttTasks              | Project Tasks                                                                     | 150   |
+| Meetings                | Meeting Series (Meeting)                                                          | 200   |
+| Agenda                  | Agenda (Meeting)                                                                  | 201   |
+| MeetingUser             | Attendees (Meeting)                                                               | 202   |
+| Decision                | Decisions (Meeting)                                                               | 204   |
+| MeetingObjective        | Objectives (Meeting)                                                              | 207   |
+| TextBox                 | Text Box (Meeting)                                                                | 210   |
+| ThingsToBring           | Things To Bring (Meeting)                                                         | 211   |
+| HomePageLibrary         | Workspace Pages (Meeting)                                                         | 212   |
+| Posts                   | Posts (Blog)                                                                      | 301   |
+| Comments                | Comments (Blog)                                                                   | 302   |
+| Categories              | Categories (Blog)                                                                 | 303   |
+| Facility                | Facility                                                                          | 402   |
+| Whereabouts             | Whereabouts                                                                       | 403   |
+| CallTrack               | Call Track                                                                        | 404   |
+| Circulation             | Circulation                                                                       | 405   |
+| Timecard                | Timecard                                                                          | 420   |
+| Holidays                | Holidays                                                                          | 421   |
+| IMEDic                  | IME (Input Method Editor) Dictionary                                              | 499   |
+| ExternalList            | External                                                                          | 600   |
+| IssueTracking           | Issue tracking                                                                    | 1100  |
+| AdminTasks              | Administrator Tasks                                                               | 1200  |
+| HealthRules             | Health Rules                                                                      | 1220  |
+| HealthReports           | Health Reports                                                                    | 1221  |
++-------------------------+-----------------------------------------------------------------------------------+-------+

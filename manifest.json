@@ -1,0 +1,28 @@
+{
+	"manifest_version": 2,
+	"name": "Sharepoint.plus",
+	"description": "Sharepoint tools",
+	"version": "0.1",
+	"icons": {
+		"16": "img/icon16.png",
+		"48": "img/icon48.png",
+		"128": "img/icon128.png"
+	},
+	"permissions": [ "http://*/*", "https://*/*" ],
+	"content_scripts": [{
+		"matches": [ "http://*/*", "https://*/*" ],
+		"js": [
+			"js/jquery-1.9.1.min.js",
+			"js/initFixScroll.js"
+		],
+		"run_at": "document_end"
+	}],
+/*	"browser_action": {
+		"default_icon": "img/icon16.png",
+		"default_popup": "popup.html",
+		"title": "Sharepoint.plus"
+	},*/
+	"web_accessible_resources": [
+		"js/fixScroll.js"
+	]
+}

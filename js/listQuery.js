@@ -45,7 +45,7 @@ $(function() {
 		$('.caml-input').addClass('caml-loading');
 		$('.header-container, .body-container').hide();
 		$('.list-detail').remove();
-		$('.error').remove();
+		$('.alert-exception').remove();
 
 		chrome.tabs.getSelected(null, function($tab) {
 			chrome.tabs.sendRequest($tab.id, {
@@ -58,8 +58,12 @@ $(function() {
 				if ($response.method == "call-getListQuery") {
 					// error check
 					if ($response.data.errorTypeName) {
-						$('<h4/>').addClass('error').text($response.data.errorTypeName).appendTo('body');
-						$('<h5/>').addClass('error').text($response.data.message).appendTo('body');
+						$('<div class="alert-exception alert alert-error">\
+								<fieldset>\
+									<legend>'+$response.data.errorTypeName+'</legend>\
+									'+$response.data.message+'\
+								</fieldset>\
+						   </div>').appendTo('body');
 						return;
 					}
 

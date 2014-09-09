@@ -40,8 +40,12 @@ $(function() {
 			if ($response.method == "call-getListDetail") {
 				// error check
 				if ($response.data.errorTypeName) {
-					$('<h4/>').addClass('error').text($response.data.errorTypeName).appendTo('body');
-					$('<h5/>').addClass('error').text($response.data.message).appendTo('body');
+					$('<div class="alert-exception alert alert-error">\
+							<fieldset>\
+								<legend>'+$response.data.errorTypeName+'</legend>\
+								'+$response.data.message+'\
+							</fieldset>\
+					   </div>').appendTo('body');
 					return;
 				}
 

@@ -1,8 +1,8 @@
 {
 	"manifest_version": 2,
 	"name": "Sharepoint.plus",
-	"description": "Sharepoint tools",
-	"version": "0.2",
+	"description": "Fix sharepoint scrollbar function on Chrome. Provide an easy access for library and list.",
+	"version": "0.2.1",
 	"icons": {
 		"16": "img/icon16.png",
 		"48": "img/icon48.png",

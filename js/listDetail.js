@@ -37,19 +37,20 @@ $(function() {
 			method : "call-getListDetail",
 			listid : $id
 		}, function($response) {
+			$('.loading-icon').remove();
+
 			if ($response.method == "call-getListDetail") {
 				// error check
 				if ($response.data.errorTypeName) {
 					$('<div class="alert-exception alert alert-error">\
 							<fieldset>\
-								<legend>'+$response.data.errorTypeName+'</legend>\
-								'+$response.data.message+'\
+								<legend>' + $response.data.errorTypeName + '</legend>\
+								' + $response.data.message + '\
 							</fieldset>\
 					   </div>').appendTo('body');
 					return;
 				}
 
-				$('.loading-icon').remove();
 				$('.navbar, .header-container, .body-container').show();
 				var $data = $response.data.fields;
 				var $root = $response.data.root.substr(0, $response.data.root.length - 1);

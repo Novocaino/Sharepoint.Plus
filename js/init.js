@@ -4,14 +4,16 @@ function bodyOnLoadWrapperForChrome() {
 			console.log('Sharepoint.plus: Start _spBodyOnLoadWrapper');
 			_spBodyOnLoadWrapper();
 
-			ExecuteOrDelayUntilScriptLoaded(initialPlus, 'sp.js');
+			ExecuteOrDelayUntilScriptLoaded(function() {
+				plus = new SPPlus();
+			}, 'sp.js');
 		}
 	} else {
 		setTimeout(bodyOnLoadWrapperForChrome, 100);
 	}
 }
-function initialPlus() {
-	plus = {};
+function SPPlus() {
+	var plus = this;
 	plus.getAbsoluteUrl = function($path) {
 		var $a = document.createElement('a');
 		$a.href = $path;
@@ -97,7 +99,21 @@ function initialPlus() {
 		}
 		return null;
 	};
+	plus.checkClientContext = function($callback) {
+		if (typeof (SP) == 'undefined' || typeof (SP.ClientContext) == 'undefined') {
+			$callback({
+				errorTypeName : 'ObjectNotFoundException',
+				message : 'Can not find sharepoint client script object SP.ClientContext.'
+			});
+			return false;
+		} else {
+			return true;
+		}
+	}
 	plus.getListCollection = function($callback) {
+		if (!plus.checkClientContext($callback)) {
+			return;
+		}
 		var $clientContext = new SP.ClientContext.get_current();
 		var $web = $clientContext.get_web();
 		$clientContext.load($web);
@@ -131,6 +147,9 @@ function initialPlus() {
 		}));
 	};
 	plus.getListDetail = function($param, $callback) {
+		if (!plus.checkClientContext($callback)) {
+			return;
+		}
 		var $clientContext = new SP.ClientContext.get_current();
 		var $web = $clientContext.get_web();
 		$clientContext.load($web);
@@ -171,6 +190,9 @@ function initialPlus() {
 		}));
 	};
 	plus.getListQuery = function($param, $callback) {
+		if (!plus.checkClientContext($callback)) {
+			return;
+		}
 		var $clientContext = new SP.ClientContext.get_current();
 		var $web = $clientContext.get_web();
 		$clientContext.load($web);

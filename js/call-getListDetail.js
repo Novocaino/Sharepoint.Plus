@@ -1,4 +1,8 @@
-(function() {
+var plus;
+(function(plus) {
+	if (!plus) {
+		plus = new SPPlus();
+	}
 	// get param
 	var $paramObj = document.getElementById('sp-param-call-getListDetail');
 	var $param = {};
@@ -14,4 +18,4 @@
 		$result.oninput = $values;
 		document.body.appendChild($result);
 	});
-})();
+})(plus || false);

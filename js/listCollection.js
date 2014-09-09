@@ -3,6 +3,10 @@ $(function() {
 		chrome.tabs.sendRequest($tab.id, {
 			method : "call-getListCollection"
 		}, function($response) {
+			$('html,body').css({
+				minWidth : 620
+			});
+			$('.loading-icon').remove();
 			if ($response.method == "call-getListCollection") {
 				// error check
 				if ($response.data.errorTypeName) {
@@ -15,10 +19,6 @@ $(function() {
 					return;
 				}
 
-				$('html,body').css({
-					minWidth : 620
-				});
-				$('.loading-icon').remove();
 				var $template = '<tr class="splist">\
 								 	<td class="icon"><img class="list-icon" src="{ImageUrl}" /></td>\
 									<td class="title"><a href="listDetail.html?id={ID}">{Title}</a></td>\

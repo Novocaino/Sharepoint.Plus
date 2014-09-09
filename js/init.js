@@ -231,4 +231,36 @@ function SPPlus() {
 			});
 		}));
 	};
+	plus.export = function($param) {
+		var $t = (new Date()).getTime().toString() + '.tmp';
+		window.webkitRequestFileSystem(window.TEMPORARY, 128 * 128, function($fs) {
+			$fs.root.getFile($t, {
+				create : true
+			}, function($fileEntry) {
+				$fileEntry.createWriter(function($fileWriter) {
+					// var $arr = new Uint8Array($param.data.length);
+					// for ( var $i = 0; $i < $param.data.length; $i++) {
+					// $arr[$i] = $param.data.charCodeAt($i);
+					// }
+					// var $blob = new Blob([ $arr ]);
+					var $blob = new Blob([ $param.data ], {
+						type : 'application/vnd.ms-excel'
+					})
+
+					$fileWriter.addEventListener("writeend", function() {
+						// download
+						var $a = document.createElement('a');
+						$a.href = $fileEntry.toURL();
+						$a.download = $param.filename;
+						$a.click();
+					}, false);
+
+					$fileWriter.write($blob);
+				}, function() {
+				});
+			}, function() {
+			});
+		}, function() {
+		});
+	}
 }

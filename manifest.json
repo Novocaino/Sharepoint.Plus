@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "Sharepoint.plus",
 	"description": "Fix sharepoint scrollbar function on Chrome. Provide an easy access for library and list.",
-	"version": "0.2.2",
+	"version": "0.2.4",
 	"icons": {
 		"16": "img/icon16.png",
 		"48": "img/icon48.png",
@@ -30,6 +30,7 @@
 		"js/fixScroll.js",
 		"js/call-getListCollection.js",
 		"js/call-getListDetail.js",
-		"js/call-getListQuery.js"
+		"js/call-getListQuery.js",
+		"js/call-export.js"
 	]
 }
